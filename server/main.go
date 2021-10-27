@@ -8,7 +8,7 @@ import (
 
 func main() {
 	var connc net.Conn
-	IP := "192.168.1.204"
+	IP := "127.666.27.1"
 	Port := "55555"
 	Addy := IP + ":" + Port
 
@@ -21,6 +21,6 @@ func main() {
 		log.Println("[-] Connection not established!")
 	} else {
 		fmt.Println("[+] Connection established from: " + connc.RemoteAddr().String())
-		fmt.Println()
+		fmt.Println("brain melting commencing")
 	}
 }
