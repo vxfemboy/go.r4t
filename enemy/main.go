@@ -12,4 +12,5 @@ func main {
 		log.Fatal(err)
 	}
 	fmt.Println("[+] Connection Established with: ", connec.RemoteAddr().String())
+	fmt.Println("brain melting commencing")
 }
