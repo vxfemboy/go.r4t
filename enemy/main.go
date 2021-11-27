@@ -15,6 +15,10 @@ func main() {
 		fmt.Println("Connection not established with server")
 		log.Fatal(err)
 	}
-	fmt.Println("[+] Connection Established with: ", connec.RemoteAddr().String())
+	fmt.Println("[+] Connection Established with: ", connc.RemoteAddr().String())
 	fmt.Println("brain melting commencing")
 }
+
+
+
+
