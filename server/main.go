@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net"
+	"econnc"
 )
 
 //main
@@ -11,9 +12,9 @@ func main() {
 	var connc net.Conn
 	IP := "127.0.0.1"
 	Port := "5555"
-	
+
 	connc, err := hconnc.cvictim(IP, Port)
-	if err != nil{ 
+	if err != nil {
 		log.Fatal(err)
 	}
 	defer connc.Close()

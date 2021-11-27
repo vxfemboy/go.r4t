@@ -3,22 +3,18 @@ package main
 import (
 	"fmt"
 	"log"
-	"net"
+	"hconnc"
 )
 
 func main() {
 	sIP := "127.0.0.1"
 	Port := "5555"
-	sAddy := sIP + ":" + Port
-	connc, err := net.Dial("tcp", sAddy)
+
+	connc, err := hconnc.cserver(sIP, Port)
 	if err != nil {
-		fmt.Println("Connection not established with server")
 		log.Fatal(err)
 	}
-	fmt.Println("[+] Connection Established with: ", connc.RemoteAddr().String())
-	fmt.Println("brain melting commencing")
+	defer connc.Close()
+	fmt.Println("Connnected with Server :", connc.RemoteAddr().string())
+
 }
-
-
-
-

