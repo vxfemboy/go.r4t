@@ -1,13 +1,17 @@
 package main
 
-import "net"
+import (
+	"fmt"
+	"log"
+	"net"
+)
 
-func main { 
-	sIP := "127.666.27.1"
-	Port := "55555"
-	sAddy := SIP + ":" + Port
+func main() {
+	sIP := "127.0.0.1"
+	Port := "5555"
+	sAddy := sIP + ":" + Port
 	connc, err := net.Dial("tcp", sAddy)
-	if err != nil{
+	if err != nil {
 		fmt.Println("Connection not established with server")
 		log.Fatal(err)
 	}

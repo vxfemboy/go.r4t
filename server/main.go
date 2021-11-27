@@ -6,10 +6,11 @@ import (
 	"net"
 )
 
+//main
 func main() {
 	var connc net.Conn
-	IP := "127.666.27.1"
-	Port := "55555"
+	IP := "127.0.0.1"
+	Port := "5555"
 	Addy := IP + ":" + Port
 
 	lis, err := net.Listen("tcp", Addy)
